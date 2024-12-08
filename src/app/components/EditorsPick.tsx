@@ -52,7 +52,7 @@ const EditorsPick = () => {
             </div>
           </div>
 
-          
+            {/* {4 image} */}
           <div className="relative w-[240px] h-[242px]">
             <Image
               src="/media-bg-cover.png" 
@@ -68,6 +68,7 @@ const EditorsPick = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };
