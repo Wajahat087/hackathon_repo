@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FaChevronDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -56,37 +57,44 @@ const Navbar = () => {
 
          
           <ul className="flex flex-col sm:flex-row sm:px-5 space-y-4 sm:space-y-0 sm:space-x-6 mt-4 sm:mt-0 max-w-full overflow-hidden">
-            <li>
-              <Link href="/" className="hover:text-blue-400 text-gray-800 font-bold">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/shop" className="hover:text-blue-400 text-gray-800 font-bold">
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-blue-400 text-gray-800 font-bold">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="hover:text-blue-400 text-gray-800 font-bold">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-blue-400 text-gray-800 font-bold">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/pages" className="hover:text-blue-400 text-gray-800 font-bold">
-                Pages
-              </Link>
-            </li>
-          </ul>
+  <li>
+    <Link href="/" className="hover:text-blue-400 text-gray-800 font-bold">
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link
+      href="/Shop"
+      className="hover:text-blue-400 text-gray-800 font-bold flex items-center gap-1"
+    >
+      <span>Shop</span>
+      <FaChevronDown className="text-gray-600 mt-[1px]" />
+    </Link>
+  </li>
+  <li>
+    <Link href="../About" className="hover:text-blue-400 text-gray-800 font-bold">
+      About
+    </Link>
+  </li>
+  <li>
+    <Link href="/blog" className="hover:text-blue-400 text-gray-800 font-bold">
+      Blog
+    </Link>
+  </li>
+  <li>
+    <Link
+      href="/contact"
+      className="hover:text-blue-400 text-gray-800 font-bold"
+    >
+      Contact
+    </Link>
+  </li>
+  <li>
+    <Link href="../Shops" className="hover:text-blue-400 text-gray-800 font-bold">
+      Pages
+    </Link>
+  </li>
+</ul>
 
           
           <div className="flex items-center space-x-6 mt-4 sm:mt-0 ml-5">

@@ -6,7 +6,7 @@ import EditorsPick from "../app/components/EditorsPick";
 import FeaturedProducts from '../app/components/FeaturedProducts';
 import HeroSection2 from "./components/HeroSection2";
 import ProductCard from "../app/components/Productcard";
-
+import Link from "next/link";
 
 export default function Home() {
   const products = [
