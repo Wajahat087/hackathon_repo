@@ -6,8 +6,23 @@ import Footer from "../components/Footer";
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
+interface ProductProps{
+  imgSrc : string;
+   title : string;
+   department : string;
+   oldPrice : string;
+   newPrice : string;
+}
+
+
+interface CategoryProps{
+  imgSrc : string;
+   title : string;
+   itemCount: string;
+}
+
 // ProductCard Component
-const ProductCard = ({ imgSrc, title, department, oldPrice, newPrice }) => (
+const ProductCard = ({ imgSrc, title, department, oldPrice, newPrice }: ProductProps ) => (
   <div className="flex-none w-[262px]">
     <div className="relative">
       <Image src={imgSrc} alt={title} width={239} height={427} className="w-full h-auto object-cover rounded-md" />
@@ -31,7 +46,7 @@ const ProductCard = ({ imgSrc, title, department, oldPrice, newPrice }) => (
 );
 
 // CategoryCard Component
-const CategoryCard = ({ imgSrc, title, itemCount }) => (
+const CategoryCard = ({ imgSrc, title, itemCount } : CategoryProps) => (
   <div className="relative group">
     <Image src={imgSrc} alt={title} width={205} height={223} className="w-full h-full object-cover" />
     <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
