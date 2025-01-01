@@ -58,13 +58,12 @@ export default function ProductPage() {
               </Link>
             </li>
           </ul>
-
-          </nav>
+        </nav>
 
         {/* Product Section */}
-        <section className="max-w-7xl mx-auto p-6 md:flex md:space-x-6">
+        <section className="max-w-7xl mx-auto p-6 md:flex md:space-x-6 flex-col-reverse md:flex-row">
           {/* Product Image Section */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 mb-6 md:mb-0">
             <div className="border rounded-lg overflow-hidden">
               <Image
                 src={selectedImage}
@@ -75,7 +74,7 @@ export default function ProductPage() {
               />
             </div>
             {/* Thumbnail Images */}
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-4 overflow-x-auto">
               {productImages.map((img, index) => (
                 <Image
                   key={index}
@@ -109,7 +108,7 @@ export default function ProductPage() {
             <p className="text-sm text-green-600 mt-1">Availability: <span>In Stock</span></p>
             <p className="text-gray-600 mt-4">
               Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
-              Self inflicted customization chain.
+              Self-inflicted customization chain.
             </p>
 
             {/* Color Selection */}
@@ -135,76 +134,70 @@ export default function ProductPage() {
         </section>
       </main>
 
+      {/* Product Tabs */}
+      <section className="max-w-7xl mx-auto p-6 border-t mt-8">
+        {/* Tab Buttons */}
+        <div className="flex items-center justify-center space-x-8 border-b">
+          <button className="pb-2 border-b-2 border-gray-500 text-gray-500 font-semibold focus:outline-none">
+            Description
+          </button>
+          <button className="pb-2 text-gray-500 hover:text-blue-500 focus:outline-none">
+            Additional Information
+          </button>
+          <button className="pb-2 text-gray-500 hover:text-blue-500 focus:outline-none">
+            Reviews (0)
+          </button>
+        </div>
 
-{/* Product Tabs */}
-<section className="max-w-7xl mx-auto p-6 border-t mt-8">
-  {/* Tab Buttons */}
-  <div className="flex items-center justify-center space-x-8 border-b">
-    <button className="pb-2 border-b-2 border-gray-500 text-gray-500 font-semibold focus:outline-none">
-      Description
-    </button>
-    <button className="pb-2 text-gray-500 hover:text-blue-500 focus:outline-none">
-      Additional Information
-    </button>
-    <button className="pb-2 text-gray-500 hover:text-blue-500 focus:outline-none">
-      Reviews (0)
-    </button>
-  </div>
-  
+        {/* Product Description Section */}
+        <section className="max-w-7xl mx-auto p-6 border-t mt-8">
+          <div className="flex flex-col md:flex-row items-start gap-8">
+            {/* Image Section */}
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img
+                src="/unsplash.png"
+                alt="Product"
+                className="w-full max-w-xs rounded-lg shadow-lg object-cover"
+              />
+            </div>
 
-{/* Product Section */}
-<section className="max-w-7xl mx-auto p-6 border-t mt-8">
-  <div className="flex flex-col md:flex-row items-start gap-8">
-    {/* Image Section */}
-    <div className="w-full md:w-1/3 flex justify-center">
-      <img
-        src="/unsplash.png" // Replace with the correct image path
-        alt="Product"
-        className="w-full max-w-xs rounded-lg shadow-lg object-cover"
-      />
-    </div>
+            {/* Text Content Section */}
+            <div className="w-full md:w-1/3">
+              <h2 className="text-gray-800 font-semibold text-lg mb-4">The quick fox jumps over</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. Self-inflicted customization chain.
+              </p>
+              <p className="text-gray-600 mt-4 leading-relaxed">
+                Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. Self-inflicted customization chain.
+              </p>
+            </div>
 
-    {/* Text Content Section */}
-    <div className="w-full md:w-1/3">
-      <h2 className="text-gray-800 font-semibold text-lg mb-4">The quick fox jumps over</h2>
-      <p className="text-gray-600 leading-relaxed">
-        Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. Self-inflicted customization chain. Exclamation exulted consecrate.
-      </p>
-      <p className="text-gray-600 mt-4 leading-relaxed">
-        Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. Self-inflicted customization chain. Exclamation exulted consecrate.
-      </p>
-    </div>
-
-    {/* Additional Content Section */}
-    <div className="w-full md:w-1/3 space-y-4">
-      {Array(3)
-        .fill("The quick fox jumps over the lazy dog")
-        .map((text, i) => (
-          <div key={i}>
-            <h3 className="font-bold text-gray-800">{text}</h3>
-            <ul className="list-arrow list-inside text-gray-600">
-              <li>{text}</li>
-              <li>{text}</li>
-              <li>{text}</li>
-            </ul>
+            {/* Additional Content Section */}
+            <div className="w-full md:w-1/3 space-y-4">
+              {Array(3)
+                .fill("The quick fox jumps over the lazy dog")
+                .map((text, i) => (
+                  <div key={i}>
+                    <h3 className="font-bold text-gray-800">{text}</h3>
+                    <ul className="list-arrow list-inside text-gray-600">
+                      <li>{text}</li>
+                      <li>{text}</li>
+                      <li>{text}</li>
+                    </ul>
+                  </div>
+                ))}
+            </div>
           </div>
-        ))}
-    </div>
-  </div>
-</section>
+        </section>
 
-
-{/* Bestseller Products */}
-<section>
+        {/* Bestseller Products */}
+        <section>
           <h3 className="text-2xl font-bold mb-4 mt-4 pt-4 pb-4 text-gray-800">
             BESTSELLER PRODUCTS
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {bestsellerProducts.map((product) => (
-              <div
-                key={product.id}
-                className="border rounded-lg overflow-hidden bg-white"
-              >
+              <div key={product.id} className="border rounded-lg overflow-hidden bg-white">
                 <Image
                   src={product.img}
                   alt={product.title}
@@ -212,32 +205,26 @@ export default function ProductPage() {
                   height={200}
                   className="w-full object-cover"
                 />
-                <div className="p-4 ml-20 text-justify items-center">
-                  <h4 className="font-semibold text-gray-800">
-                    {product.title}
-                  </h4>
-                  <p className="text-gray-500 text-justify items-center text-sm">English Department</p>
-                  <p className="text-green-500 text-justify items-center font-bold mt-2">
-                    {product.price}
-                  </p>
+                <div className="p-4 text-center">
+                  <h4 className="font-semibold text-gray-800">{product.title}</h4>
+                  <p className="text-gray-500 text-sm">English Department</p>
+                  <p className="text-green-500 font-bold mt-2">{product.price}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-           {/* Logos */}
-              <section className="flex justify-center items-center gap-48 px-8 py-6 bg-gray-50 mt-6">
-                <Image src="/Vector.png" alt="Hooli" width={102.99} height={33.81} />
-                <Image src="/Vector-(1).png" alt="Lyft" width={83} height={58.96} />
-                <Image src="/Vector-(2).png" alt="Stripe" width={102} height={74.84} />
-                <Image src="/Vector-(3).png" alt="AWS" width={102.98} height={41.98} />
-                <Image src="/Vector-(4).png" alt="Reddit" width={103.68} height={61.75} />
-                <Image src="/Vector-(5).png" alt="text" width={75.75} height={71.86} />
-              </section>
-
-</section>
-
+        {/* Logos Section */}
+        <section className="flex flex-wrap justify-center items-center gap-6 sm:gap-12 px-4 sm:px-8 py-6 bg-gray-50 mt-6">
+          <Image src="/Vector.png" alt="Hooli" width={103} height={34} />
+          <Image src="/Vector-(1).png" alt="Lyft" width={83} height={59} />
+          <Image src="/Vector-(2).png" alt="Stripe" width={102} height={75} />
+          <Image src="/Vector-(3).png" alt="AWS" width={103} height={42} />
+          <Image src="/Vector-(4).png" alt="Reddit" width={104} height={62} />
+          <Image src="/Vector-(5).png" alt="text" width={76} height={72} />
+        </section>
+      </section>
 
       <Footer />
     </div>

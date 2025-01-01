@@ -19,7 +19,7 @@ const Herosection = () => {
           <h5 className="font-montserrat font-bold text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] tracking-[0.1px] text-white">
             SUMMER 2020
           </h5>
-          <h1 className="font-montserrat font-bold text-[40px] text-sm sm:text-[58px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-white">
+          <h1 className="font-montserrat font-bold text-[40px] text-sm sm:text-[48px] leading-[56px] sm:leading-[80px] tracking-[0.2px] text-white">
             NEW COLLECTION
           </h1>
           <h4 className="font-montserrat font-normal text-[16px] sm:text-[20px] leading-[24px] sm:leading-[30px] tracking-[0.2px] text-white w-full sm:w-[376px]">

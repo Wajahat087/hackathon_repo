@@ -77,13 +77,18 @@ const Navbar = () => {
     </Link>
   </li>
   <li>
-    <Link href="/blog" className="hover:text-blue-400 text-gray-800 font-bold">
+    <Link href="../Pricing" className="hover:text-blue-400 text-gray-800 font-bold">
       Blog
     </Link>
   </li>
   <li>
+    <Link href="../Pricings" className="hover:text-blue-400 text-gray-800 font-bold">
+      Pricing
+    </Link>
+  </li>
+  <li>
     <Link
-      href="/contact"
+      href="../contact"
       className="hover:text-blue-400 text-gray-800 font-bold"
     >
       Contact
