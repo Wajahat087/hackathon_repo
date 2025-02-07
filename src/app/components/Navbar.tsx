@@ -64,41 +64,41 @@ const Navbar = () => {
   </li>
   <li>
     <Link
-      href="/Shop"
+      href="/product"
       className="hover:text-blue-400 text-gray-800 font-bold flex items-center gap-1"
     >
-      <span>Shop</span>
+      <span>Products</span>
       <FaChevronDown className="text-gray-600 mt-[1px]" />
     </Link>
   </li>
-  <li>
+  {/* <li>
     <Link href="../About" className="hover:text-blue-400 text-gray-800 font-bold">
       About
     </Link>
-  </li>
-  <li>
+  </li> */}
+  {/* <li>
     <Link href="../Pricing" className="hover:text-blue-400 text-gray-800 font-bold">
       Blog
     </Link>
-  </li>
-  <li>
+  </li> */}
+  {/* <li>
     <Link href="../Pricings" className="hover:text-blue-400 text-gray-800 font-bold">
       Pricing
     </Link>
-  </li>
-  <li>
+  </li> */}
+  {/* <li>
     <Link
       href="../contact"
       className="hover:text-blue-400 text-gray-800 font-bold"
     >
       Contact
     </Link>
-  </li>
-  <li>
+  </li> */}
+  {/* <li>
     <Link href="../Shops" className="hover:text-blue-400 text-gray-800 font-bold">
       Pages
     </Link>
-  </li>
+  </li> */}
 </ul>
 
           
@@ -119,7 +119,7 @@ const Navbar = () => {
             </Link>
 
             
-            <Link href="/favorites" className="flex items-center hover:text-blue-400 text-blue-400 mr-4">
+            <Link href="/wishlist" className="flex items-center hover:text-blue-400 text-blue-400 mr-4">
               <i className="fas fa-heart mr-1"></i> 1
             </Link>
           </div>
